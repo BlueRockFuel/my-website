@@ -34,7 +34,7 @@
 
     .contact-info {
       display: flex;
-      gap: 1.5rem;
+      gap: 0.5rem;
     }
 
     .socials {
@@ -50,7 +50,7 @@
     }
 
     .socials a:hover {
-      color: #702006;
+      color: #00c6c6;
     }
 
     .logo-section {
@@ -123,9 +123,9 @@
     .member-price {
       background-color: #1C2E4A;
       color: #ffffff;
-      padding: 3rem 2rem;
+      padding: 3rem 2rem 5rem 2rem;
       text-align: center;
-      flex-grow: 3;
+      flex-grow: 1;
     }
 
     .member-price h3 {
@@ -135,7 +135,8 @@
     }
 
     .member-price img {
-      width: 200px;
+      width: 600px; /* triple the previous 200px size */
+      max-width: 90%;
       height: auto;
       margin-bottom: 1.5rem;
       border-radius: 8px;
@@ -148,12 +149,14 @@
     }
 
     footer {
-      background-color: #1C2E4A;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: #1C2E4A;
       text-align: center;
-      padding: 1rem;
+      padding: 1rem 0;
       font-size: 0.9rem;
+      border-top: 2px solid #1C2E4A;
       margin-top: auto;
+      width: 100%;
     }
 
     @media (max-width: 600px) {
@@ -169,6 +172,10 @@
       .logo-section img {
         width: 150px;
       }
+
+      .member-price img {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -177,7 +184,7 @@
 
   <div class="top-bar">
     <div class="contact-info">
-      <span> (555) 123-4567 | </span>
+      <span>(555) 123-4567 |</span>
       <span> info@yourdomain.com</span>
     </div>
     <div class="socials">
@@ -187,9 +194,8 @@
     </div>
   </div>
 
-  <!-- Logo placeholder section -->
   <div class="logo-section">
-    <img src="official-logo-bk.png" alt="Company Logo Placeholder">
+    <img src="official-logo-bk.png" alt="BlueRock Logo">
   </div>
 
   <section class="hero">
@@ -205,12 +211,12 @@
 
   <section class="member-price">
     <h3>BLUE ROCK FUEL MEMBER PRICE</h3>
-    <img src="membership.png" alt="Membership Offer Placeholder">
+    <img src="membership.png" alt="Membership Offer">
     <p>Join our membership to unlock unlimited delivery scheduling. Experience premium service without the premium price tag.</p>
   </section>
 
   <footer>
-    &copy; 2025 BlueRock Fuel Delivery. All Rights Reserved.
+    © 2025 BlueRock Fuel Delivery. All Rights Reserved.
   </footer>
 
 </body>
