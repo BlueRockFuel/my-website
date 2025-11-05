@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Fuel Delivery Service</title>
+  <title>BlueRock Fuel Delivery</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,13 +15,16 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: #D1CFC9;
+      background-color: #ffffff;
       color: #1C2E4A;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .top-bar {
       background-color: #1C2E4A;
-      color: #D1CFC9;
+      color: #ffffff;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -40,14 +43,28 @@
     }
 
     .socials a {
-      color: #D1CFC9;
+      color: #ffffff;
       text-decoration: none;
       font-size: 1.2rem;
       transition: color 0.3s ease;
     }
 
     .socials a:hover {
-      color: #E3C565;
+      color: #702006;
+    }
+
+    .logo-section {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 2px solid #1C2E4A;
+    }
+
+    .logo-section img {
+      width: 180px;
+      height: auto;
     }
 
     .hero {
@@ -55,15 +72,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #D1CFC9;
-      padding: 4rem 2rem;
+      background-color: #ffffff;
+      padding: 4rem 2rem 2rem 2rem;
       text-align: center;
     }
 
     .hero img {
-      width: 250px;
+      width: 100%;
       height: auto;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .hero h1 {
@@ -92,7 +109,7 @@
     }
 
     .highlight {
-      color: #E3C565;
+      color: #702006;
       font-weight: 700;
     }
 
@@ -105,15 +122,23 @@
 
     .member-price {
       background-color: #1C2E4A;
-      color: #D1CFC9;
+      color: #ffffff;
       padding: 3rem 2rem;
       text-align: center;
+      flex-grow: 1;
     }
 
     .member-price h3 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #E3C565;
+      color: #702006;
+    }
+
+    .member-price img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
     }
 
     .member-price p {
@@ -124,10 +149,11 @@
 
     footer {
       background-color: #1C2E4A;
-      color: #D1CFC9;
+      color: #ffffff;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+      margin-top: auto;
     }
 
     @media (max-width: 600px) {
@@ -137,7 +163,11 @@
       }
 
       .hero img {
-        width: 200px;
+        width: 100%;
+      }
+
+      .logo-section img {
+        width: 150px;
       }
     }
   </style>
@@ -157,6 +187,11 @@
     </div>
   </div>
 
+  <!-- Logo placeholder section -->
+  <div class="logo-section">
+    <img src="logo-placeholder.png" alt="Company Logo Placeholder">
+  </div>
+
   <section class="hero">
     <img src="pricing.png" alt="Pricing Information">
     <h1>Your Local Fuel Delivery Experts</h1>
@@ -170,6 +205,7 @@
 
   <section class="member-price">
     <h3>BLUE ROCK FUEL MEMBER PRICE</h3>
+    <img src="member-placeholder.png" alt="Membership Offer Placeholder">
     <p>Join our membership to unlock exclusive fuel rates, priority delivery scheduling, and discounts on all service calls. Experience premium service without the premium price tag.</p>
   </section>
 
