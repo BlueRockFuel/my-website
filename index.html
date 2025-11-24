@@ -15,21 +15,22 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
       background-color: #ffffff;
-      color: #1C2E4A;
+      color: #191c2b;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
     .top-bar {
-      background-color: #1C2E4A;
+      background-color: #191c2b;
       color: #ffffff;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0.5rem 2rem;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
 
     .contact-info {
@@ -53,13 +54,22 @@
       color: #00c6c6;
     }
 
+    .top-bar a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .top-bar a:hover {
+      color: #00c6c6;
+      text-decoration: underline;
+    }
+
     .logo-section {
       background-color: #ffffff;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 0.25rem 1.5rem;
-      border-bottom: 2px solid #1C2E4A;
+      padding: 1rem 2.5rem;
     }
 
     .logo-section img {
@@ -73,7 +83,7 @@
       align-items: center;
       justify-content: center;
       background-color: #ffffff;
-      padding: 4rem 2rem 2rem 2rem;
+      padding: .025rem 0rem 1rem 0rem;
       text-align: center;
     }
 
@@ -85,15 +95,18 @@
 
     .hero h1 {
       font-size: 2rem;
-      color: #1C2E4A;
+      color: #191c2b;
       font-weight: 700;
       margin-bottom: 1rem;
     }
 
     .hero p {
       font-size: 1.1rem;
-      color: #1C2E4A;
+      color: #191c2b;
       max-width: 600px;
+      padding: 0rem 1rem;
+      line-height: 1.6;
+
     }
 
     .services {
@@ -105,11 +118,11 @@
       font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      color: #1C2E4A;
+      color: #191c2b;
     }
 
     .highlight {
-      color: #702006;
+      color: #00c6c6;
       font-weight: 700;
     }
 
@@ -121,7 +134,7 @@
     }
 
     .member-price {
-      background-color: #1C2E4A;
+      background-color: #191c2b;
       color: #ffffff;
       padding: 1rem 2rem 1rem 2rem;
       text-align: center;
@@ -129,8 +142,8 @@
     }
 
     .member-price h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 0rem;
       color: #00c6c6;
     }
 
@@ -138,23 +151,24 @@
       width: 600px; /* triple the previous 200px size */
       max-width: 90%;
       height: auto;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0rem;
       border-radius: 8px;
     }
 
     .member-price p {
       max-width: 600px;
       margin: 0 auto;
-      line-height: 1.5;
+      line-height: 1.5rem;
+      padding: 0rem 1rem 5rem 1rem;
     }
 
     footer {
       background-color: #ffffff;
-      color: #1C2E4A;
+      color: #191c2b;
       text-align: center;
-      padding: 1rem 0;
+      padding: 1rem 2rem;
       font-size: 0.9rem;
-      border-top: 2px solid #1C2E4A;
+      border-top: 2px solid #191c2b;
       margin-top: auto;
       width: 100%;
     }
@@ -184,8 +198,16 @@
 
   <div class="top-bar">
     <div class="contact-info">
-      <span>(555) 123-4567 |</span>
-      <span> info@yourdomain.com</span>
+      <span>
+        <a href="tel:4805551234">
+          (480) 338-0163 |
+        </a>
+      </span>
+      <span> 
+        <a href="mailto:fuelup@bluerockfueldelivery.com?subject=Fuel%20Inquiry&body=Hello,%20I%27m%20interested%20in%20scheduling%20your%20services." class="email-link">
+          fuelup@bluerockfueldelivery.com
+        </a>
+      </span>
     </div>
     <div class="socials">
       <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -194,24 +216,49 @@
   </div>
 
   <div class="logo-section">
-    <img src="official-logo-bk.png" alt="BlueRock Logo">
+    <img src="BR logo small.png" alt="BlueRock Logo">
   </div>
 
   <section class="hero">
     <img src="official-pricing.png" alt="Pricing Information">
-    <h1>Your Local Fuel Delivery Experts</h1>
-    <p>Reliable, on-demand fuel delivery for vehicles, boats, campers, equipment, and business fleets — straight to your location.</p>
+    <h1>Don't Miss Out! Schedule A Delivery</h1>
+    <p>Call, Text, or Email Us 
+      <br>
+      <span><b><i>Two hour lead time.</i></b></span>
+      <br>
+      <br>
+      Refuel & Save - Quick, Convenient, and Affordable
+    </p>
+    <p>
+      Call & Text: (480) 388 - 0163
+      <br>
+      Email: fuelup@bluerockfueldelivery.com
+    </p>
+    <img src="fuel-options.png" style="width: 80%;max-width: 40rem; height: auto;">
+    <p>
+      Delivery Available from 7 AM to 7 PM
+      <br>
+      <i>* days & time vary depending on availabilty</i>
+      <br>
+      Call/Email Monday to Saturday 11 AM to 6 PM
+    </p>
   </section>
 
   <section class="services">
-    <h2><span class="highlight">Fuel Delivery</span> for Vehicles, Boats, Campers, Equipment, and Business Fleets</h2>
-    <p>We’re redefining convenience. Get premium fuel delivered directly to you — saving time, reducing downtime, and keeping your engines running smoothly wherever you are.</p>
+    <h2>Whether you are at home or at the office, <span class="highlight"> we bring the gas to you.</span></h2>
+    <p>Fuel Delivery for Vehicles, Boats, Campers, Equipment, and Business Fleets</p>
+    <br>
+    <h2>Locations We Service</h2>
+    <p>
+      Mesa | Tempe | Queen Creek | Chandler | Ahwatukee | Scottsdale | Gilbert | Apache Junction
+    </p>
   </section>
 
   <section class="member-price">
     <h3>BLUE ROCK FUEL MEMBER PRICE</h3>
     <img src="membership.png" alt="Membership Offer">
-    <p>Join our membership to unlock unlimited delivery scheduling. Experience premium service without the premium price tag.</p>
+    <p>Save with Our Fuel Delivery Membership! Includes Unlimited Delivery for 2 vehicles only & Priority schdeduling.</p>
+    <p><i>*** You can cancel your delivery for no charge <b>24 hours before</b> your delivery day. Otherwise a $25.00 delivery will be charged to the card on file.</i></p>
   </section>
 
   <footer>
