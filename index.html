@@ -40,6 +40,8 @@
     .contact-info {
       display: flex;
       gap: 0.5rem;
+      white-space: nowrap;
+      flex-shrink:0;
     }
 
     /* LOGO */
@@ -214,9 +216,10 @@
       }
 
       .top-bar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 0.5rem;
+        justify-content: space-between;
+        gap: 0.75rem;
       }
     }
   </style>
@@ -230,7 +233,6 @@
       <span>|</span>
       <a href="mailto:fuelup@bluerockfueldelivery.com">fuelup@bluerockfueldelivery.com</a>
     </div>
-    <strong>Order Today!</strong>
   </div>
 
   <header class="logo-section">
