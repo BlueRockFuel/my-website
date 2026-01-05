@@ -5,32 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BlueRock Fuel Delivery</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome for Social Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
   <style>
-    body {
+    /* RESET */
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
-      background-color: #ffffff;
       color: #191c2b;
-      display: flex;
-      flex-direction: column;
+      background: #ffffff;
       min-height: 100vh;
     }
 
+    /* TOP BAR */
     .top-bar {
-      background-color: #191c2b;
-      color: #ffffff;
+      background: #00c6c6;
+      color: #fff;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       padding: 0.5rem 2rem;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
     }
 
     .contact-info {
@@ -38,157 +42,181 @@
       gap: 0.5rem;
     }
 
-    .socials {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .socials a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
-    }
-
-    .socials a:hover {
-      color: #00c6c6;
-    }
-
-    .top-bar a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    .top-bar a:hover {
-      color: #00c6c6;
-      text-decoration: underline;
-    }
-
+    /* LOGO */
     .logo-section {
-      background-color: #ffffff;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 1rem 2.5rem;
+      padding: 1.5rem 2.5rem;
     }
 
     .logo-section img {
       width: 180px;
-      height: auto;
     }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #ffffff;
-      padding: .025rem 0rem 1rem 0rem;
-      text-align: center;
+    /* HERO SPLIT */
+    .hero-split {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 2rem 2rem;
+      display: grid;
+      grid-template-columns: 2fr 3fr; /* give pricing more room */
+      gap: 3rem;
+      align-items: start;
     }
 
-    .hero img {
-      width: 100%;
-      height: auto;
+    .location {
+      color: #777;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      line-height: 1.05;
+      font-weight: 600;
       margin-bottom: 2rem;
     }
 
-    .hero h1 {
-      font-size: 2rem;
-      color: #191c2b;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
+    .order-btn {
+      background: #00c6c6;
+      color: #fff;
+      border: none;
+      padding: 1rem 2.75rem;
+      border-radius: 999px;
       font-size: 1.1rem;
-      color: #191c2b;
-      max-width: 600px;
-      padding: 0rem 1rem;
-      line-height: 1.6;
-
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .services {
-      padding: 3rem 2rem;
-      text-align: center;
+    .order-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,198,198,0.3);
     }
 
-    .services h2 {
-      font-size: 1.8rem;
+    .fine-print {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 1.5rem;
+    }
+
+    .social a {
+      color: inherit;
       font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: #191c2b;
+      text-decoration: none;
+    }
+
+    /* PRICING — SIDE BY SIDE */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* ✅ horizontal */
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .plan {
+      background: #fff;
+      border-radius: 22px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      position: relative;
+      transition: transform 0.2s ease;
+    }
+
+    .plan:hover {
+      transform: translateY(-3px);
+    }
+
+    .featured {
+      border: 2px solid #00c6c6;
+      padding: 2.3rem 1.5rem;
+    }
+
+    .fleet {
+      border: 2px solid #e0e0e0;
+    }
+
+    .badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #00c6c6;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .price {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+
+    .fleet .price {
+      font-size: 2rem;
+    }
+
+    .sub {
+      color: #666;
+      font-size: 0.95rem;
     }
 
     .highlight {
       color: #00c6c6;
       font-weight: 700;
+      margin-top: 0.75rem;
     }
 
-    .services p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    .member-price {
-      background-color: #191c2b;
-      color: #ffffff;
-      padding: 1rem 2rem 1rem 2rem;
+    /* SECTIONS */
+    .services,
+    .hours {
+      padding: 2.5rem 2rem;
       text-align: center;
-      flex-grow: 1;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .member-price h3 {
-      font-size: 2rem;
-      margin-bottom: 0rem;
+    .about {
+      background: #191c2b;
+      color: #fff;
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+
+    .about h3 {
       color: #00c6c6;
+      margin-bottom: 1.5rem;
     }
 
-    .member-price img {
-      width: 600px; /* triple the previous 200px size */
-      max-width: 90%;
-      height: auto;
-      margin-bottom: 0rem;
-      border-radius: 8px;
-    }
-
-    .member-price p {
-      max-width: 600px;
+    .about-content {
+      max-width: 800px;
       margin: 0 auto;
-      line-height: 1.5rem;
-      padding: 0rem 1rem 5rem 1rem;
+      padding: 0 1.5rem;
+      line-height: 1.7;
     }
 
+    /* FOOTER */
     footer {
-      background-color: #ffffff;
-      color: #191c2b;
-      text-align: center;
-      padding: 1rem 2rem;
-      font-size: 0.9rem;
       border-top: 2px solid #191c2b;
-      margin-top: auto;
-      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.85rem;
     }
 
-    @media (max-width: 600px) {
-      .contact-info {
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .hero-split {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing {
+        grid-template-columns: 1fr;
+      }
+
+      .top-bar {
         flex-direction: column;
+        align-items: center;
         gap: 0.5rem;
-      }
-
-      .hero img {
-        width: 100%;
-      }
-
-      .logo-section img {
-        width: 150px;
-      }
-
-      .member-price img {
-        width: 90%;
       }
     }
   </style>
@@ -198,69 +226,83 @@
 
   <div class="top-bar">
     <div class="contact-info">
-      <span>
-        <a href="tel:4805551234">
-          (480) 338-0163 |
-        </a>
-      </span>
-      <span> 
-        <a href="mailto:fuelup@bluerockfueldelivery.com?subject=Fuel%20Inquiry&body=Hello,%20I%27m%20interested%20in%20scheduling%20your%20services." class="email-link">
-          fuelup@bluerockfueldelivery.com
-        </a>
-      </span>
+      <a href="tel:4803380163">(480) 338-0163</a>
+      <span>|</span>
+      <a href="mailto:fuelup@bluerockfueldelivery.com">fuelup@bluerockfueldelivery.com</a>
     </div>
-    <div class="socials">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    </div>
+    <strong>Order Today, Get a Free Delivery While Spots Last</strong>
   </div>
 
-  <div class="logo-section">
-    <img src="BR logo small.png" alt="BlueRock Logo">
-  </div>
+  <header class="logo-section">
+    <img src="BR logo small.png" alt="BlueRock Fuel Delivery Logo">
+  </header>
 
-  <section class="hero">
-    <img src="official-pricing.png" alt="Pricing Information">
-    <h1>Don't Miss Out! Schedule A Delivery</h1>
-    <p>Call, Text, or Email Us 
-      <br>
-      <span><b><i>Two hour lead time.</i></b></span>
-      <br>
-      <br>
-      Refuel & Save - Quick, Convenient, and Affordable
-    </p>
-    <p>
-      Call & Text: (480) 388 - 0163
-      <br>
-      Email: fuelup@bluerockfueldelivery.com
-    </p>
-    <a href="https://forms.gle/9k5a8ogtFLEbFkmf6">
-    <img src="fuel-options.png" style="width: 80%;max-width: 40rem; height: auto;">
-    </a>
-    <p>
-      Delivery Available from 7 AM to 7 PM
-      <br>
-      <i>* days & time vary depending on availabilty</i>
-      <br>
-      Call/Email Monday to Saturday 11 AM to 6 PM
-    </p>
+  <section class="hero-split">
+    <div class="hero-content">
+      <p class="location">Serving the Metro Phoenix Area</p>
+      <h1>Don’t Trade<br>Your Time for Fuel</h1>
+      <a href="https://forms.gle/9k5a8ogtFLEbFkmf6" target="_blank" rel="noopener noreferrer">
+        <button class="order-btn">Order Now</button>
+      </a>
+      <p class="fine-print">* Average gas price. Call / text / email to verify price.</p>
+      <p class="social">
+        Follow us on
+        <a href="https://www.instagram.com/bluerockfueldelivery">Instagram</a>
+        to see weekly gas prices
+      </p>
+    </div>
+
+    <div class="pricing">
+      <div class="plan">
+        <h2>Standard</h2>
+        <p class="price">$25</p>
+        <p class="sub">per delivery</p>
+      </div>
+
+      <div class="plan featured">
+        <span class="badge">Most Popular</span>
+        <h2>Membership</h2>
+        <p class="price">$35</p>
+        <p class="sub">per month</p>
+        <p class="highlight">UNLIMITED DELIVERY</p>
+      </div>
+
+      <div class="plan fleet">
+        <h2>Fleet Services</h2>
+        <p class="price">Custom</p>
+        <p class="sub">Call for rates</p>
+        <p class="highlight">(480) 338-0163</p>
+      </div>
+    </div>
   </section>
 
   <section class="services">
-    <h2>Whether you are at home or at the office, <span class="highlight"> we bring the gas to you.</span></h2>
-    <p>Fuel Delivery for Vehicles, Boats, Campers, Equipment, and Business Fleets</p>
+    <br>
+    <br>
     <br>
     <h2>Locations We Service</h2>
+    <br>
+    <p>Mesa | Tempe | Queen Creek | Chandler | Ahwatukee | Scottsdale | Gilbert</p>
+  </section>
+
+  <section class="hours">
     <p>
-      Mesa | Tempe | Queen Creek | Chandler | Ahwatukee | Scottsdale | Gilbert
+      Delivery Available from 7 AM – 7 PM<br>
+      <em>*Days & times vary by availability</em><br><br>
+      Call / Email Monday – Saturday, 11 AM – 6 PM
     </p>
   </section>
 
-  <section class="member-price">
-    <h3>BLUE ROCK FUEL MEMBER PRICE</h3>
-    <img src="membership.png" alt="Membership Offer">
-    <p>Save with Our Fuel Delivery Membership! Includes Unlimited Delivery for 2 vehicles only & Priority schdeduling.</p>
-    <p><i>*** You can cancel your delivery for no charge <b>24 hours before</b> your delivery day. Otherwise a $25.00 delivery will be charged to the card on file.</i></p>
+  <section class="about">
+    <h3>About Us</h3>
+    <div class="about-content">
+      <p>
+        Our story began with a personal challenge. As parents of a son with a disability, we saw firsthand how frustrating gas stations can be.
+        <br><br>
+        We created BlueRock Fuel Delivery to make fueling more convenient and accessible—for families, professionals, fleets, and anyone who values their time.
+      </p>
+    </div>
+    <br>
   </section>
 
   <footer>
